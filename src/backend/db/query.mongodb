@@ -1,0 +1,9 @@
+use('usuarios_login');
+db.createCollection('user',{
+    validator:{
+        $jsonSchema:{
+            bsonTipe:"object",
+            required:
+        }
+    }
+});
