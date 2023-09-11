@@ -3,7 +3,21 @@ db.createCollection('user',{
     validator:{
         $jsonSchema:{
             bsonTipe:"object",
-            required:
+            required:["username","password"],
+            properties:{
+                username:{
+                    bsonType:"string"
+                },
+                password:{
+                    bsonTipe:"password"
+                }
+            }
         }
     }
+});
+
+use('usuarios_login');
+db.user.insertOne({
+    username:"jhonhernandez",
+    password:"3224757531"
 });

@@ -1,6 +1,7 @@
-import  Express  from "express";
+import  Express, { Router }  from "express";
 import dotenv from 'dotenv';
 import cors from 'cors';
+import RoutesLogin from "./backend/routes/[routes].login.js";
 
 dotenv.config();
 const appExpress = Express();
@@ -9,10 +10,7 @@ appExpress.use(Express.text());
 appExpress.use(Express.json());
 appExpress.use(cors());
 
-appExpress.post('/',(req,res)=>{
-    res.send({message:"estamos en el servidor"});
-});
-
+//appExpress.use(RoutesLogin);
 
 let serve = JSON.parse(process.env.SERVE);
 const config = {

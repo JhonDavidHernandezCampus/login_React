@@ -16,7 +16,7 @@ function Login() {
         e.preventDefault();
         // console.log(e.target);
         let data = Object.fromEntries(new FormData(e.target));
-        console.log(data.usuario);
+        console.log(data);
         let config = {
             method:"POST",
             headers: new Headers(),
