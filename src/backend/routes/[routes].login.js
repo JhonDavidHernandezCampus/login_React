@@ -1,12 +1,13 @@
 import express from "express";
-import rateLimit from "express-rate-limit";
+import loginlimit from "../middleware/limit.js"; 
+import { loginVersion } from "../support/[vesion].login.js";
 import routesVersioning from "express-routes-versioning";
 
 
 const routerlogin = express.Router();
 const version = routesVersioning();
 
-routerlogin.get('/login', rateLimit, version());
+routerlogin.post('/login', loginlimit, version(loginVersion));
 
 
 

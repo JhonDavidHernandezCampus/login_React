@@ -20,9 +20,9 @@ function Login() {
         let config = {
             method:"POST",
             headers: new Headers(),
-            body: data
+            body: JSON.stringify(data)
         }
-        let consu = await (await fetch(`http://localhost:5001`,config)).json();
+        let consu = await (await fetch(`http://localhost:5001/login`,config)).json();
         console.log(consu);
     }    
 
