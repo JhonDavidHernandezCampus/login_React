@@ -18,6 +18,6 @@ db.createCollection('user',{
 
 use('usuarios_login');
 db.user.insertOne({
-    username:"jhonhernandez",
-    password:"3224757531"
+    username:"Migel",
+    password:"MigelTrainer"
 });

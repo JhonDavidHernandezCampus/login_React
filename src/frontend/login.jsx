@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function Login() {
 /* 
     const [formData, setFormData] = useState({
@@ -28,10 +29,10 @@ function Login() {
 
 
     return <div>
-        <h1>Iniciar secion</h1>
+        <h1>Iniciar sesion</h1>
         <form action="" onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="">Nombre usuario</label>
+                <label htmlFor="">Usuario:  </label>
                 <input
                     type="text"
                     name="usuario"
@@ -40,7 +41,7 @@ function Login() {
                 />
             </div>
             <div>
-                <label htmlFor="">introdusca la contraseña </label>
+                <label htmlFor="">Contraseña: </label>
                 <input
                     type="text"
                     name="password"
